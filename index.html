@@ -32,15 +32,15 @@
       </div>
       <div class="intro-bottom">
         <div class="story-meta"><span>📚 9 páginas</span><span>⭐ ¡Sorpresas!</span><span>🦋 Para explorar</span></div>
-        <button class="primary-btn" id="startBtn">¡Vamos a la aventura! <span>🚀</span></button>
-        <button class="text-btn" id="continueBtn" hidden>Continuar donde lo dejaste →</button>
+        <button class="primary-btn start-icon-btn" id="startBtn" aria-label="Comenzar aventura" title="Comenzar aventura">▶</button>
+        <button class="text-btn" id="continueBtn" aria-label="Continuar historia" title="Continuar historia" hidden>▶</button>
       </div>
       <p class="offline-note"><span>◉</span> Puedes volver a leerla sin conexión después de cargarla.</p>
     </section>
 
     <section class="reader" id="reader" hidden>
       <div class="reader-head">
-        <button class="back-btn" id="backBtn">← <span>Portada</span></button>
+        <button class="back-btn" id="backBtn" aria-label="Volver a portada" title="Volver a portada">⌂</button>
         <div class="progress-label"><span id="sceneCounter">ESCENA 1 DE 9</span><span id="progressPercent">11%</span></div>
       </div>
       <div class="progress-track"><span id="progressBar"></span></div>
@@ -54,16 +54,16 @@
         </div>
       </article>
       <div class="reader-controls">
-        <button class="secondary-btn" id="prevBtn">← Anterior</button>
+        <button class="secondary-btn nav-icon-btn" id="prevBtn" aria-label="Escena anterior" title="Escena anterior">◀</button>
         <div class="dots" id="dots" aria-label="Escenas"></div>
-        <button class="primary-btn next-btn" id="nextBtn">Siguiente <span>→</span></button>
+        <button class="primary-btn next-btn nav-icon-btn" id="nextBtn" aria-label="Siguiente escena" title="Siguiente escena">▶</button>
       </div>
       <div class="reader-footer">
-        <button class="quiet-btn" id="bookmarkBtn">☆ Guardar escena</button>
-        <button class="quiet-btn" id="readAloudBtn">▶ Escuchar</button>
-        <a class="quiet-btn pdf-link" href="/Javis_y_el_Ambar_del_Tiempo.pdf" target="_blank" rel="noopener">↗ Abrir PDF original</a>
+        <button class="quiet-btn utility-icon-btn" id="bookmarkBtn" aria-label="Guardar escena" title="Guardar escena">☆</button>
+        <button class="quiet-btn utility-icon-btn" id="readAloudBtn" aria-label="Escuchar historia" title="Escuchar historia">🔊</button>
+        <a class="quiet-btn utility-icon-btn pdf-link" href="/Javis_y_el_Ambar_del_Tiempo.pdf" target="_blank" rel="noopener" aria-label="Abrir cuento original" title="Abrir cuento original">📖</a>
       </div>
-      <div class="ending" id="ending" hidden><div class="ending-icon">✨</div><h2>¡Misión cumplida!</h2><p>El ámbar sigue brillando… quizá una nueva aventura esté por comenzar.</p><button class="primary-btn" id="restartBtn">Volver a vivir la historia ↻</button></div>
+      <div class="ending" id="ending" hidden><div class="ending-icon">✨</div><h2>¡Misión cumplida!</h2><p>El ámbar sigue brillando… quizá una nueva aventura esté por comenzar.</p><button class="primary-btn nav-icon-btn" id="restartBtn" aria-label="Repetir historia" title="Repetir historia">↻</button></div>
     </section>
     <footer class="site-footer"><span>JAVIS <b>✦</b> ÁMBAR DEL TIEMPO</span><span>¡Lee, escucha y descubre!</span></footer>
   </main>
