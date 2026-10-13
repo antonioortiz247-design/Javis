@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101b2c">
+  <meta name="description" content="Lee y explora Javis y el Ámbar del Tiempo, una aventura interactiva con el Capitán Escarabajo.">
+  <title>Javis y el Ámbar del Tiempo</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Inicio" id="homeBtn"><span class="brand-mark">✦</span><span>CUENTOS <b>VIVOS</b></span></a>
+    <div class="top-actions">
+      <button class="icon-btn" id="soundBtn" aria-label="Activar narración" title="Narración">🔊</button>
+      <button class="icon-btn" id="installBtn" hidden aria-label="Instalar aplicación" title="Instalar aplicación">＋</button>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="intro" id="intro">
+      <div class="eyebrow"><span class="live-dot"></span> UNA AVENTURA INTERACTIVA</div>
+      <h1>Javis y el <em>Ámbar del Tiempo</em></h1>
+      <p class="subtitle">Una aventura con el Capitán Escarabajo</p>
+      <div class="hero-art" role="img" aria-label="Un escarabajo dorado mágico en una selva prehistórica">
+        <div class="sun-glow"></div><div class="leaf leaf-a">❧</div><div class="leaf leaf-b">❧</div>
+        <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+        <div class="hero-beetle">🪲</div><div class="hero-spark spark-a">✦</div><div class="hero-spark spark-b">✧</div>
+        <div class="hero-caption"><span>EL TIEMPO GUARDA UN SECRETO</span><b>Tu aventura comienza aquí</b></div>
+      </div>
+      <div class="intro-bottom">
+        <div class="story-meta"><span>📖 9 escenas</span><span>⏱ 5 min</span><span>🌿 Para explorar</span></div>
+        <button class="primary-btn" id="startBtn">Comenzar aventura <span>↗</span></button>
+        <button class="text-btn" id="continueBtn" hidden>Continuar donde lo dejaste →</button>
+      </div>
+      <p class="offline-note"><span>◉</span> Puedes volver a leerla sin conexión después de cargarla.</p>
+    </section>
+
+    <section class="reader" id="reader" hidden>
+      <div class="reader-head">
+        <button class="back-btn" id="backBtn">← <span>Portada</span></button>
+        <div class="progress-label"><span id="sceneCounter">ESCENA 1 DE 9</span><span id="progressPercent">11%</span></div>
+      </div>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <article class="story-card">
+        <div class="scene-art" id="sceneArt" aria-hidden="true"><div class="scene-sky"></div><div class="scene-emoji" id="sceneEmoji">🪲</div><div class="scene-glow"></div><span class="scene-number" id="sceneNumber">01</span></div>
+        <div class="scene-content">
+          <div class="scene-kicker" id="sceneKicker">EL DESCUBRIMIENTO</div>
+          <h2 id="sceneTitle">Un hallazgo brillante</h2>
+          <p class="scene-text" id="sceneText"></p>
+          <div class="interactive-prompt" id="prompt"><span>✦</span><span id="promptText">Toca el ámbar para descubrir la aventura.</span></div>
+        </div>
+      </article>
+      <div class="reader-controls">
+        <button class="secondary-btn" id="prevBtn">← Anterior</button>
+        <div class="dots" id="dots" aria-label="Escenas"></div>
+        <button class="primary-btn next-btn" id="nextBtn">Siguiente <span>→</span></button>
+      </div>
+      <div class="reader-footer">
+        <button class="quiet-btn" id="bookmarkBtn">☆ Guardar escena</button>
+        <button class="quiet-btn" id="readAloudBtn">▶ Escuchar</button>
+        <a class="quiet-btn pdf-link" href="/Javis_y_el_Ambar_del_Tiempo.pdf" target="_blank" rel="noopener">↗ Abrir PDF original</a>
+      </div>
+      <div class="ending" id="ending" hidden><div class="ending-icon">✨</div><h2>¡Misión cumplida!</h2><p>El ámbar sigue brillando… quizá una nueva aventura esté por comenzar.</p><button class="primary-btn" id="restartBtn">Volver a vivir la historia ↻</button></div>
+    </section>
+    <footer class="site-footer"><span>JAVIS <b>✦</b> ÁMBAR DEL TIEMPO</span><span>Una historia para leer, imaginar y jugar.</span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
