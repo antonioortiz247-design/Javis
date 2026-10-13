@@ -17,9 +17,9 @@ function render(){
  const s=scenes[current];$("sceneCounter").textContent="ESCENA "+(current+1)+" DE "+scenes.length;$("progressPercent").textContent=Math.round((current+1)/scenes.length*100)+"%";$("progressBar").style.width=((current+1)/scenes.length*100)+"%";
  $("sceneNumber").textContent=String(current+1).padStart(2,"0");$("sceneKicker").textContent=s.kicker;$("sceneTitle").textContent=s.title;$("sceneText").textContent=s.text;$("sceneEmoji").textContent=s.emoji;$("promptText").textContent=s.prompt;$("sceneArt").dataset.scene=current+1;
  const art=$("sceneArt"),emoji=$("sceneEmoji"),glow=art.querySelector(".scene-glow");let img=art.querySelector(".scene-image");if(!img){img=document.createElement("img");img.className="scene-image";img.alt="Ilustración original de la escena "+(current+1);img.onload=()=>{emoji.hidden=true;glow.hidden=true};img.onerror=()=>{img.hidden=true;emoji.hidden=false;glow.hidden=false};art.appendChild(img)}img.hidden=false;img.src="/"+(current+1)+".png";img.alt="Ilustración original "+(current+1)+" de Javis y el Ámbar del Tiempo";
- $("prevBtn").disabled=current===0;$("nextBtn").innerHTML=current===scenes.length-1?'Volver a empezar <span>↻</span>':'Siguiente <span>→</span>';
+ $("prevBtn").disabled=current===0;$("nextBtn").innerHTML=current===scenes.length-1?'↻':'▶';$("nextBtn").setAttribute("aria-label",current===scenes.length-1?"Repetir historia":"Siguiente escena");
  $("dots").replaceChildren(...scenes.map((_,i)=>{const b=document.createElement("button");b.className="dot-btn"+(i===current?" active":"");b.setAttribute("aria-label","Ir a escena "+(i+1));b.title="Escena "+(i+1);b.onclick=()=>go(i);return b}));
- const marks=saved().bookmarks||[];$("bookmarkBtn").textContent=marks.includes(current)?"★ Escena guardada":"☆ Guardar escena";$("ending").hidden=current!==scenes.length-1;persist();
+ const marks=saved().bookmarks||[];$("bookmarkBtn").textContent=marks.includes(current)?"★":"☆";$("bookmarkBtn").setAttribute("aria-label",marks.includes(current)?"Quitar escena guardada":"Guardar escena");$("ending").hidden=current!==scenes.length-1;persist();
 }
 function go(n){current=(n+scenes.length)%scenes.length;render();if(soundOn)readScene();window.scrollTo({top:0,behavior:"smooth"})}
 function start(n=0){intro.hidden=true;reader.hidden=false;current=n;render();window.scrollTo({top:0,behavior:"smooth"})}
