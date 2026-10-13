@@ -20,7 +20,7 @@ Es un sitio estático, sin paso de compilación ni instalación de dependencias:
 Importa el repositorio `antonioortiz247-design/Javis` en Vercel y despliega desde `main`.
 
 ## PDF original
-Coloca el archivo `Javis_y_el_Ambar_del_Tiempo.pdf` en la raíz del repositorio para activar el enlace al PDF original. El lector interactivo contiene el texto de la historia transcrito a partir del documento de referencia. Las ilustraciones originales del PDF todavía deben incorporarse como recursos del sitio para que la versión web reproduzca exactamente el arte del libro.
+Coloca el archivo `Javis_y_el_Ambar_del_Tiempo.pdf` en la raíz del repositorio para activar el enlace al PDF original. El lector interactivo contiene el texto de la historia transcrito a partir del documento de referencia. Sube las nueve ilustraciones originales a la raíz del repositorio con los nombres exactos `1.png`, `2.png`, `3.png`, `4.png`, `5.png`, `6.png`, `7.png`, `8.png` y `9.png`. El lector las carga automáticamente en la escena correspondiente.
 
 ## Notas técnicas
 La lectura por voz depende de las voces disponibles en el dispositivo. El modo sin conexión guarda la estructura de la PWA tras la primera visita con conexión; el PDF no se almacena automáticamente en caché.
