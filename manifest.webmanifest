@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "Javis y el Ámbar del Tiempo",
+  "short_name": "Javis",
+  "description": "Una aventura interactiva con el Capitán Escarabajo.",
+  "lang": "es-MX",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1220",
+  "theme_color": "#101b2c",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
