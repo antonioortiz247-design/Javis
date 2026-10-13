@@ -51,3 +51,35 @@ button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-vi
  .reader-footer{gap:10px}.utility-icon-btn{width:60px;height:60px;min-height:60px;font-size:27px}
 }
 @media(max-height:650px) and (max-width:560px){.scene-art{height:65svh;min-height:300px}.hero-art{height:68svh;min-height:300px}.nav-icon-btn,.secondary-btn.nav-icon-btn{width:62px;height:62px;min-width:62px;min-height:62px}.back-btn{width:50px;height:50px;min-height:50px}.utility-icon-btn{width:48px;height:48px;min-height:48px}}
+
+
+/* Portrait artwork takes priority: nearly full-screen reading mode */
+.reader .scene-content,.reader .reader-footer{display:none!important}
+.reader .shell{padding-top:6px}
+.reader .reader-head{height:48px;margin:0 0 5px;align-items:center}
+.reader .back-btn{width:48px;height:48px;min-height:48px;border-radius:16px;font-size:28px}
+.reader .progress-label{font-size:10px}
+.reader .progress-track{height:6px;margin:0 0 7px}
+.reader .story-card{border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+.reader .scene-art{height:calc(100svh - 172px);min-height:0;max-height:none;border:4px solid #fff;border-radius:22px;box-shadow:0 5px 0 #dfe9f8;overflow:hidden;background:#c5f0e1}
+.reader .scene-art:before{display:none}
+.reader .scene-image{object-fit:contain;object-position:center;width:100%;height:100%;background:linear-gradient(135deg,#b9f1df,#bfe7ff)}
+.reader .scene-number{top:10px;right:10px}
+.reader .reader-controls{height:82px;margin:12px 0 0;gap:20px;justify-content:center}
+.reader .nav-icon-btn,.reader .secondary-btn.nav-icon-btn{width:72px;height:72px;min-width:72px;min-height:72px;font-size:30px}
+.reader .dots{flex:0 1 auto;order:initial}
+@media(max-width:560px){
+ .reader .shell{padding:4px 8px 8px}
+ .reader .reader-head{height:43px;margin-bottom:4px}
+ .reader .back-btn{width:42px;height:42px;min-height:42px;font-size:26px}
+ .reader .progress-track{margin-bottom:5px}
+ .reader .scene-art{height:calc(100svh - 145px);border-width:3px;border-radius:18px}
+ .reader .reader-controls{height:68px;margin-top:9px;gap:16px}
+ .reader .nav-icon-btn,.reader .secondary-btn.nav-icon-btn{width:60px;height:60px;min-width:60px;min-height:60px;font-size:27px}
+ .reader .dots{gap:4px}.reader .dot-btn{width:7px;height:7px}.reader .dot-btn.active{width:17px}
+}
+@media(max-height:650px) and (max-width:560px){
+ .reader .scene-art{height:calc(100svh - 128px)}
+ .reader .reader-controls{height:54px;margin-top:6px}
+ .reader .nav-icon-btn,.reader .secondary-btn.nav-icon-btn{width:48px;height:48px;min-width:48px;min-height:48px}
+}
